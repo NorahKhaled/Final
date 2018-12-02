@@ -89,12 +89,13 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         Intent intent;
         int res_id = item.getItemId();
-        if(res_id == R.id.action_noti) { //intent
+    /*    if(res_id == R.id.action_noti) { //intent
             Toast.makeText(getApplicationContext(),"You select noti option",Toast.LENGTH_LONG).show();
              intent=new Intent(MainActivity.this,Notification.class);
             startActivity(intent);
         }
-        else if(res_id == R.id.action_location){
+        */
+         if(res_id == R.id.action_location){
             Toast.makeText(getApplicationContext(),"You select location option",Toast.LENGTH_LONG).show();
             intent=new Intent(MainActivity.this,MapsActivity.class);
             startActivity(intent);

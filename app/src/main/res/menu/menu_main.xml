@@ -2,13 +2,7 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <item
-        android:id="@+id/action_noti"
-        android:title="notification"
-        android:icon="@mipmap/notification"
-        app:showAsAction="ifRoom"
-        android:orderInCategory="100"
-        />
+
     <item
         android:id="@+id/action_location"
         android:title="location"
