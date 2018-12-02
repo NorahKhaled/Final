@@ -37,7 +37,6 @@ import com.google.firebase.storage.UploadTask;
 
 import java.io.IOException;
 public class ProfileActivity extends AppCompatActivity  implements View.OnClickListener{
-    private static final int CHOOSE_IMAGE = 101;
 
     TextView UserNameDisplay;
     ProgressBar progressBar;
@@ -75,7 +74,7 @@ public class ProfileActivity extends AppCompatActivity  implements View.OnClickL
     }
 
 
-    private void loadUserInformation() { //retriev userName and photo
+    private void loadUserInformation() { //retrieve userName and photo
 
     }
 

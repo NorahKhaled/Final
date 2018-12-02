@@ -17,6 +17,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseAuthUserCollisionException;
 
 import static com.facebook.FacebookSdk.getApplicationContext;
 
@@ -93,9 +94,13 @@ public class AccoutFragment extends Fragment implements View.OnClickListener{
                     Intent intent = new Intent(getApplicationContext(), ProfileActivity.class);
                     intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);//clear all open activites and open it
                     startActivity(intent);
-                } else { //print actual exception
-                    Toast.makeText(getApplicationContext(), "failed credintial", Toast.LENGTH_SHORT).show();
+                }  else if(task.getException() instanceof FirebaseAuthUserCollisionException){
+
+                    Toast.makeText(getApplicationContext(),"You are ALREADY sign in",Toast.LENGTH_LONG).show();
+                }else {
+                    Toast.makeText(getApplicationContext(), task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                 }
+
             }
         });
     }
